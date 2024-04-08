@@ -37,7 +37,7 @@ module.exports = async function (req, res, subject, next) {
 			from: user,
 			to: email,
 			subject,
-			html: htmlRegister(`https://localhost:3000/users/verify/${token}`),
+			html: htmlRegister(`https://${req.hostname}/users/verify/${token}`),
 		};
 		let patternEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
